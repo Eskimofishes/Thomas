@@ -1,0 +1,342 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Cafeteria Management & Institutional Catering</title>
+  <meta name="description" content="Data-led cafeteria management, smart vending, and institutional catering with transparent pricing." />
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="./styles.css" />
+</head>
+<body>
+  <!-- ===== Sticky Header ===== -->
+  <header class="site-header">
+    <div class="container nav">
+      <a class="brand" href="#home" aria-label="Home">
+        <span class="logo"></span>
+        <strong>Catering Corner</strong>
+      </a>
+      <nav aria-label="Primary">
+        <ul class="nav-list">
+          <li><a href="#about">About Us</a></li>
+          <li><a href="#services">Our Services</a></li>
+          <li><a href="#pricing">Our Price</a></li>
+          <li><a class="btn btn-primary" href="#contact">Contact Us</a></li>
+        </ul>
+        <button id="hamburger" class="hamburger" aria-expanded="false" aria-controls="mobile-menu" aria-label="Open menu">☰</button>
+      </nav>
+    </div>
+    <div id="mobile-menu" class="mobile-menu" role="region" aria-label="Mobile Menu">
+      <a href="#about">About Us</a>
+      <a href="#services">Our Services</a>
+      <a href="#pricing">Our Price</a>
+      <a class="btn btn-primary" href="#contact">Contact Us</a>
+    </div>
+  </header>
+
+  <!-- ===== Hero ===== -->
+  <main id="home">
+    <section class="hero section">
+      <div class="container hero-wrap">
+        <div class="hero-copy">
+          <h1 class="eyebrow">A Smarter Way to Cater</h1>
+          <h2 class="display">Cut cafeteria costs by up to <span class="highlight">20%</span> while lifting satisfaction.</h2>
+          <p class="lead">We use data, structured operations, and owner-managed reliability to deliver meals on time and on budget.</p>
+          <div class="cta-row">
+            <a href="#contact" class="btn btn-primary">Get a Free Consultation</a>
+            <a href="#about" class="btn btn-outline">Learn more</a>
+          </div>
+        </div>
+        <div class="hero-media">
+          <img src="https://images.unsplash.com/photo-1556909200-39f2ef8c056c?q=80&w=1600&auto=format&fit=crop" alt="Bright company cafeteria" loading="lazy"/>
+        </div>
+      </div>
+    </section>
+
+    <!-- ===== About / Intro ===== -->
+    <section id="about" class="section about">
+      <div class="container">
+        <div class="about-grid">
+          <div>
+            <h3 class="kicker">Singapore’s data-led cafeteria partner</h3>
+            <p>Catering Corner is a modern cafeteria management team built by operators who obsess over data, structure, and accountability. We align employee preferences with employer goals and food-partner capabilities—then measure, improve, and deliver.</p>
+            <p>As an owner-managed company, we treat every cafeteria like a live project. If there’s an issue, it’s handled personally—fast.</p>
+            <a href="#services" class="btn btn-outline">Explore Services</a>
+          </div>
+          <aside class="about-aside">
+            <div class="member-of card">
+              <small class="muted">A Member of</small>
+              <div class="embassy-logo">The Food Embassy Group</div>
+            </div>
+          </aside>
+        </div>
+      </div>
+    </section>
+
+    <!-- ===== Why Choose Us ===== -->
+    <section class="section why">
+      <div class="container">
+        <h3 class="section-title">Why Choose Catering Corner?</h3>
+        <p class="lead">Transforming cafeteria management with data.</p>
+        <div class="grid features">
+          <article class="card feature">
+            <div class="icon">💹</div>
+            <h4>Maximum ROI</h4>
+            <p>Stretch budgets using demand forecasts, cost controls, and satisfaction tracking.</p>
+          </article>
+          <article class="card feature">
+            <div class="icon">👥</div>
+            <h4>Owner-Managed Reliability</h4>
+            <p>Hands-on leadership—from setup to daily operations to quick issue resolution.</p>
+          </article>
+          <article class="card feature">
+            <div class="icon">🤖</div>
+            <h4>Smart & Digital Efficiency</h4>
+            <p>Cashless systems and smart vending to minimise manpower and queues.</p>
+          </article>
+          <article class="card feature">
+            <div class="icon">📊</div>
+            <h4>Data-Driven Menus</h4>
+            <p>Menu optimisation to tailor cuisines, reduce waste, and satisfy every shift.</p>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- ===== Gallery / In-House Support ===== -->
+    <section class="section gallery-strip">
+      <div class="container">
+        <h4 class="subheading">In-House Catering Support</h4>
+        <div class="gallery">
+          <img class="span-2" src="https://images.unsplash.com/photo-1604908177073-22d7a2b482f1?q=80&w=1600&auto=format&fit=crop" alt="Serving line"/>
+          <img class="span-3" src="https://images.unsplash.com/photo-1541542684-4a01806f8475?q=80&w=1600&auto=format&fit=crop" alt="Chef preparing food"/>
+          <img src="https://images.unsplash.com/photo-1542838132-92c53300491e?q=80&w=1600&auto=format&fit=crop" alt="Point of sale"/>
+          <img class="span-2" src="https://images.unsplash.com/photo-1516714435131-44d6b64dc6a6?q=80&w=1600&auto=format&fit=crop" alt="Cafeteria seating"/>
+          <img class="span-2" src="https://images.unsplash.com/photo-1542831371-29b0f74f9713?q=80&w=1600&auto=format&fit=crop" alt="Digital dashboard"/>
+        </div>
+      </div>
+    </section>
+
+    <!-- ===== Services ===== -->
+    <section id="services" class="section services">
+      <div class="container">
+        <h3 class="section-title">Our Services</h3>
+        <p class="lead">Customised, cost-effective cafeteria management for your business.</p>
+        <div class="grid service-grid">
+          <article class="card service">
+            <img src="https://images.unsplash.com/photo-1470337458703-46ad1756a187?q=80&w=1200&auto=format&fit=crop" alt="Buffet service"/>
+            <h4>Full Staff Cafeteria Management</h4>
+            <p>On-site operations, vendor management, and KPI-driven performance.</p>
+          </article>
+          <article class="card service">
+            <img src="https://images.unsplash.com/photo-1556742526-795a8eac09a5?q=80&w=1200&auto=format&fit=crop" alt="Cashless payment"/>
+            <h4>Cashless, Digital Cafeteria</h4>
+            <p>Seamless cashless payments and digital ordering with live reporting.</p>
+          </article>
+          <article class="card service">
+            <img src="https://images.unsplash.com/photo-1504754524776-8f4f37790ca0?q=80&w=1200&auto=format&fit=crop" alt="Cooking"/>
+            <h4>On-site or Off-site Cooking</h4>
+            <p>Flexible production to suit facilities, volume, and safety requirements.</p>
+          </article>
+          <article class="card service">
+            <img src="https://images.unsplash.com/photo-1571772805064-207c8435df79?q=80&w=1200&auto=format&fit=crop" alt="Smart vending"/>
+            <h4>Self-service Smart Food Vending</h4>
+            <p>24/7 availability with minimal staffing requirements.</p>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- ===== Pricing ===== -->
+    <section id="pricing" class="section pricing">
+      <div class="container">
+        <h3 class="section-title">Choose your pricing plan</h3>
+        <div class="pricing-grid">
+          <article class="price-card card">
+            <div class="badge">Best Value</div>
+            <h4>Basic Plan</h4>
+            <div class="price">$8,800 <span>/ month</span></div>
+            <ul class="features-list">
+              <li>Ideal for teams under 300 employees</li>
+              <li>5-day operation (Mon–Fri)</li>
+              <li>On-site kitchen provided</li>
+            </ul>
+            <div class="note">Minimum 24 months</div>
+            <a class="btn btn-primary" href="#contact">Contact Us</a>
+            <ul class="perks">
+              <li>$5,000 annual credit for company events</li>
+              <li>Low-cost employee meal subscription</li>
+              <li>Monthly bazaar pop-ups</li>
+              <li>Monthly hawker treats</li>
+              <li>Quarterly health screenings</li>
+              <li>$10 birthday meal voucher</li>
+            </ul>
+          </article>
+
+          <article class="price-card card">
+            <h4>Premium Plan</h4>
+            <div class="price">$10,800 <span>/ month</span></div>
+            <ul class="features-list">
+              <li>For 300–600 employees</li>
+              <li>5-day operation (Mon–Fri)</li>
+              <li>On-site kitchen provided</li>
+            </ul>
+            <div class="note">Minimum 24 months</div>
+            <a class="btn btn-primary" href="#contact">Contact Us</a>
+            <ul class="perks">
+              <li>$8,000 annual event credit</li>
+              <li>Low-cost meal subscription</li>
+              <li>Monthly bazaar pop-ups</li>
+              <li>Monthly hawker treats</li>
+              <li>Quarterly health screenings</li>
+              <li>$10 birthday meal voucher</li>
+            </ul>
+          </article>
+
+          <article class="price-card card">
+            <div class="badge">24/7</div>
+            <h4>24/7 Plan</h4>
+            <div class="price">$13,800 <span>/ month</span></div>
+            <ul class="features-list">
+              <li>For 24/7 operations, 300+ employees</li>
+              <li>Round-the-clock staffing</li>
+              <li>On-site kitchen provided</li>
+            </ul>
+            <div class="note">Minimum 24 months</div>
+            <a class="btn btn-primary" href="#contact">Contact Us</a>
+            <ul class="perks">
+              <li>$5,000 annual event credit</li>
+              <li>Low-cost meal subscription</li>
+              <li>Monthly bazaar pop-ups</li>
+              <li>Monthly hawker treats</li>
+              <li>Quarterly health screenings</li>
+              <li>$10 birthday meal voucher</li>
+            </ul>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- ===== Testimonials ===== -->
+    <section class="section testimonials">
+      <div class="container">
+        <h3 class="section-title">Client Testimonials</h3>
+        <div class="slider">
+          <div class="slides" id="slides">
+            <figure class="slide">
+              <blockquote>“Catering Corner’s approach to institutional catering transformed our cafeteria. Hassle-free, diverse, and reliable.”</blockquote>
+              <figcaption>— Ms Goh, Aerospace Client</figcaption>
+            </figure>
+            <figure class="slide">
+              <blockquote>“We’ve seen a big uptick in satisfaction and cost efficiency since the switch.”</blockquote>
+              <figcaption>— Mr Chiang, Logistics Client</figcaption>
+            </figure>
+          </div>
+          <div class="dots">
+            <button class="active" aria-label="Slide 1"></button>
+            <button aria-label="Slide 2"></button>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ===== Logos ===== -->
+    <section class="section logos">
+      <div class="container">
+        <h3 class="subheading">Trusted by many companies worldwide</h3>
+        <div class="logo-grid">
+          <div class="logo">LOGO</div><div class="logo">LOGO</div><div class="logo">LOGO</div>
+          <div class="logo">LOGO</div><div class="logo">LOGO</div><div class="logo">LOGO</div>
+          <div class="logo">LOGO</div><div class="logo">LOGO</div><div class="logo">LOGO</div>
+          <div class="logo">LOGO</div><div class="logo">LOGO</div><div class="logo">LOGO</div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ===== CTA Budget Line ===== -->
+    <section class="section budget">
+      <div class="container">
+        <h3>Your Budget, Our Mission: <span class="highlight">20% Less</span>, 100% Satisfaction</h3>
+      </div>
+    </section>
+
+    <!-- ===== Contact ===== -->
+    <section id="contact" class="section contact">
+      <div class="container contact-grid">
+        <div>
+          <h3 class="section-title">Get in touch for more information</h3>
+          <form id="contact-form" novalidate>
+            <div class="grid two">
+              <label class="field">
+                <span>Name</span>
+                <input name="name" required />
+              </label>
+              <label class="field">
+                <span>Email Address</span>
+                <input name="email" type="email" required />
+              </label>
+            </div>
+            <div class="grid two">
+              <label class="field">
+                <span>Contact Number</span>
+                <input name="phone" inputmode="tel" />
+              </label>
+              <label class="field">
+                <span>Subject</span>
+                <input name="subject" />
+              </label>
+            </div>
+            <label class="field">
+              <span>Message</span>
+              <textarea name="message" required></textarea>
+            </label>
+            <button class="btn btn-primary" type="submit">Submit</button>
+            <p id="form-status" class="muted" role="status" aria-live="polite"></p>
+          </form>
+        </div>
+        <aside class="card contact-card">
+          <h4>Address</h4>
+          <p>123 Business Park,<br/>#01-01, Singapore 123456</p>
+          <h4>Contact number</h4>
+          <p>+65 6123 4567</p>
+          <h4>Email</h4>
+          <p><a href="mailto:hello@yourdomain.com">hello@yourdomain.com</a></p>
+        </aside>
+      </div>
+    </section>
+  </main>
+
+  <!-- ===== Footer ===== -->
+  <footer class="site-footer">
+    <div class="container footer-grid">
+      <div>
+        <div class="brand">
+          <span class="logo"></span><strong>Catering Corner</strong>
+        </div>
+        <ul class="muted">
+          <li>123 Business Park, #01-01, Singapore 123456</li>
+          <li>+65 6123 4567</li>
+          <li><a href="mailto:hello@yourdomain.com">hello@yourdomain.com</a></li>
+        </ul>
+      </div>
+      <div>
+        <strong>Quick Links</strong>
+        <ul class="footer-links">
+          <li><a href="#home">Home</a></li>
+          <li><a href="#about">About Us</a></li>
+          <li><a href="#services">Services</a></li>
+          <li><a href="#contact">Contact</a></li>
+        </ul>
+      </div>
+      <div class="copyright muted">Copyright © <span id="year"></span> Catering Corner Pte Ltd. All rights reserved.</div>
+    </div>
+
+    <!-- Floating WhatsApp button (replace number) -->
+    <a class="wa-btn" href="https://wa.me/00000000000" target="_blank" rel="noopener" aria-label="Chat on WhatsApp">WhatsApp</a>
+  </footer>
+
+  <script src="./main.js"></script>
+</body>
+</html>
