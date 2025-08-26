@@ -6,7 +6,7 @@ hamburger?.addEventListener('click',()=>{
   hamburger.setAttribute('aria-expanded', String(open));
 });
 
-// Simple testimonial slider
+// Simple testimonial slider (auto + dots)
 const slides = document.getElementById('slides');
 const dots = document.querySelectorAll('.dots button');
 let idx = 0;
@@ -18,7 +18,7 @@ function go(i){
 dots.forEach((d,i)=> d.addEventListener('click', ()=>go(i)));
 setInterval(()=> go((idx+1)%dots.length), 6000);
 
-// Contact form front-end stub
+// Contact form stub
 const form = document.getElementById('contact-form');
 const status = document.getElementById('form-status');
 form?.addEventListener('submit', (e)=>{
