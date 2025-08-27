@@ -39,10 +39,50 @@ a{text-decoration:none; color:inherit}
 
 /* Header */
 .site-header{position:sticky; top:0; z-index:50; background:rgba(255,255,255,.9); backdrop-filter:saturate(180%) blur(8px); border-bottom:1px solid var(--line)}
-.nav{display:flex; align-items:center; justify-content:space-between; padding:14px 0}
-.brand{display:flex; align-items:center; gap:.6rem}
-.nav-list{display:none; list-style:none; gap:1.2rem; margin:0; padding:0}
-.hamburger{display:inline-flex; width:40px; height:40px; align-items:center; justify-content:center; border:1px solid var(--line); border-radius:12px; background:#fff}
+.container.nav{
+  display:flex;
+  align-items:center;           /* vertical center */
+  justify-content:space-between;
+  gap:clamp(12px,2vw,24px);
+  min-height:64px;
+}
+
+/* Brand block */
+.container.nav > .brand{
+  display:flex;
+  align-items:center;
+  gap:.6rem;
+  line-height:1;           
+}
+
+/* The inner <nav> that holds ul + hamburger */
+.container.nav > nav{
+  display:flex;
+  align-items:center;          
+  gap:16px;
+}
+
+/* Main links */
+.nav-list{
+  display:flex;             
+  align-items:center;
+  gap:1.2rem;
+  margin:0;                
+  padding:0;                 
+  list-style:none;
+}
+.nav-list li{display:flex; align-items:center;}
+
+/* Hamburger stays vertically centered */
+.hamburger{
+  display:inline-flex;
+  align-items:center;
+  justify-content:center;
+  width:40px; height:40px;
+  border:1px solid var(--line);
+  border-radius:12px;
+  background:#fff;
+}
 
 /* Mobile menu */
 .mobile-menu{display:none; border-top:1px solid var(--line); padding:12px var(--s-6)}
@@ -91,11 +131,69 @@ a{text-decoration:none; color:inherit}
 .note{color:var(--muted); margin:.4rem 0 .8rem}
 
 /* Testimonials */
-.slider{position:relative; overflow:hidden}
-.slides{display:flex; transition:transform .5s ease}
-.slide{min-width:100%; padding:var(--s-6); border:1px solid var(--line); border-radius:var(--radius); background:#fff; box-shadow:var(--shadow)}
+/* .slider{width:100%; max-width: 100% overflow:hidden}
+.slides{display:flex; gap:0; margin:0; padding: 0; width:100%; transition:transform .5s ease}
+.slide{
+  flex:0 0 100%;           
+  max-width:100%;
+  box-sizing:border-box;     
+  padding:clamp(12px, 2.2vw, var(--s-6));
+  word-break:break-word;         
+  overflow-wrap:anywhere;
+}
 .dots{display:flex; gap:8px; justify-content:center; margin-top:12px}
 .dots button{width:10px; height:10px; border-radius:999px; border:none; background:#cbd5e1; cursor:pointer}
+.dots button.active{background:var(--brand)} */
+
+/* Testimonials – Carousel */
+.slider{
+  position:relative;
+  overflow:hidden;
+  width:100%;
+  max-width:100%;
+  touch-action:pan-y; /* allow horizontal swipes */
+}
+
+.slides{
+  display:flex;
+  margin:0; padding:0;
+  gap:0;
+  transition:transform .5s ease;
+  will-change:transform;
+}
+
+/* one slide per view */
+.slide{
+  flex:0 0 100%;
+  max-width:100%;
+  box-sizing:border-box;
+  padding:var(--s-6);
+  border:1px solid var(--line);
+  border-radius:var(--radius);
+  background:#fff;
+  box-shadow:var(--shadow);
+  overflow-wrap:anywhere;
+}
+
+/* arrows */
+.arrow{
+  position:absolute; top:50%; transform:translateY(-50%);
+  width:42px; height:42px;
+  display:inline-flex; align-items:center; justify-content:center;
+  border:1px solid var(--line); border-radius:12px; background:#fff;
+  cursor:pointer; user-select:none;
+  box-shadow:var(--shadow);
+}
+.arrow:hover{border-color:var(--brand); color:var(--brand)}
+.arrow.prev{left:8px}
+.arrow.next{right:8px}
+
+/* dots */
+.dots{display:flex; gap:8px; justify-content:center; margin-top:12px}
+.dots button{
+  width:10px; height:10px; border-radius:999px;
+  border:none; background:#cbd5e1; cursor:pointer
+}
 .dots button.active{background:var(--brand)}
 
 /* Logos */
@@ -121,11 +219,15 @@ a{text-decoration:none; color:inherit}
 
 /* Breakpoints */
 @media (min-width: 576px){
+  .nav-list {display: none;}
+  .hamburger{display: inline-flex} 
   .container{padding:0 var(--s-8)}
   .logo-grid{grid-template-columns:repeat(4,1fr)}
   .gallery-strip .gallery{grid-template-columns:repeat(3,1fr)}
 }
 @media (min-width: 768px){
+  .nav-list {display: none;}
+  .hamburger{display: inline-flex} 
   .section{padding:var(--s-24) 0}
   .grid.two{grid-template-columns:repeat(2,1fr)}
   .features{grid-template-columns:repeat(2,1fr)}
@@ -145,6 +247,8 @@ a{text-decoration:none; color:inherit}
   .gallery-strip .gallery{grid-template-columns:repeat(6,1fr)}
 }
 @media (min-width: 1200px){
+  .nav-list{display:flex}
+  .hamburger{display:none}
   .container{max-width: var(--container)}
   .section{padding:var(--s-24) 0}
   .hero{padding:var(--s-30) 0 var(--s-24)}
