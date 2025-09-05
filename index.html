@@ -9,14 +9,25 @@
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Almarai:wght@300;400;700;800&family=Instrument+Serif:ital@0;1&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="./styles.css" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" integrity="..." crossorigin="anonymous">
+
 </head>
+
+<!-- Floating WhatsApp button -->
+<a
+  class="whatsapp-float"
+  href="https://wa.me/6598790889?text=Hi%20there%2C%20I%E2%80%99d%20like%20a%20quote."
+  target="_blank" rel="noopener"
+  aria-label="Chat with us on WhatsApp">
+  <i class="fab fa-whatsapp"></i>
+</a>
+
 <body>
   <!-- ===== Header ===== -->
   <header class="site-header">
     <div class="container nav">
       <a class="brand" href="#home" aria-label="Home">
-        <span class="brand-dot" aria-hidden="true"></span>
-        <span class="brand-name">Institutional Catering SG</span>
+        <img src="images/ICPL Inverted Color.png" alt="Institutional Catering Pte Ltd Logo" class="logo">
       </a>
       <nav aria-label="Primary">
         <ul class="nav-list">
@@ -76,7 +87,7 @@
         <div class="how-copy">
           <h2>How Can We Offer This for Only $12,000?</h2>
           <p class="lead">
-            It’s the first question everyone asks. We’ve re-engineered the institutional catering management model to be ruthlessly efficient and transparent.
+            It’s always the first question everyone asks. The truth is, we’ve fundamentally re-engineered the institutional catering management model to be ruthlessly efficient and transparent.   
             We don’t offer discounts; we offer fundamentally better value.
           </p>
           <h3 class="method-kicker">The method ❊</h3>
@@ -102,10 +113,9 @@
     <!-- ===== Lock In Rate / Quote Form ===== -->
     <section id="quote" class="section quote">
       <div class="container">
-        <h2>Lock In Your $12,000/Month Rate. Capacity is Limited</h2>
+        <h2>Lock In Your $12,000/Month Rate Now. Capacity is Limited</h2>
         <p class="lead">
-          Due to the overwhelming demand for our fixed-price model, we onboard a limited number of new clients each quarter.
-          Our process is simple.
+          Due to the overwhelming demand for our fixed-price model, we can only onboard a very limited number of new clients each quarter.
         </p>
 
         <form id="quote-form" novalidate class="card quote-form">
@@ -131,16 +141,17 @@
             </label>
           </div>
 
-          <fieldset class="field">
-            <legend>Company Size *</legend>
-            <div class="sizes">
-              <label><input type="radio" name="size" value="1-100" required /> 1–100</label>
-              <label><input type="radio" name="size" value="101-300" /> 101–300</label>
-              <label><input type="radio" name="size" value="300+" /> Above 300+</label>
-            </div>
-          </fieldset>
+          <label class="field full">
+            <span>Company Size *</span>
+            <select name="size" required class="select">
+              <option value="" selected disabled>Select an option</option>
+              <option value="1-100">1–100</option>
+              <option value="101-300">101–300</option>
+              <option value="300+">Above 300+</option>
+            </select>
+          </label>
 
-          <button type="submit" class="btn btn-primary">Get Your Flat Fee</button>
+          <button type="submit" class="btn btn-primary">Get Your Flat Fee Now</button>
           <p id="form-status" class="muted" role="status" aria-live="polite"></p>
         </form>
 
@@ -154,9 +165,9 @@
           <h3>The Simple Onboarding Process:</h3>
           <ol>
             <li><strong>Check Availability:</strong> We confirm capacity for your location and size.</li>
-            <li><strong>The 10-Minute Fit Call:</strong> Ensure our standard model fits your needs.</li>
-            <li><strong>Sign the Simple Contract:</strong> One straightforward agreement.</li>
-            <li><strong>We Seamlessly Take Over:</strong> Our team handles the transition.</li>
+            <li><strong>The 10-Minute Fit Call:</strong> We ensure our standard model is a perfect fit for your needs..</li>
+            <li><strong>Sign the Simple Contract:</strong> No complex negotiations. One simple agreement.</li>
+            <li><strong>We Seamlessly Take Over:</strong> Our team handles the entire transition.</li>
           </ol>
         </div>
       </div>
@@ -176,11 +187,11 @@
         <li><a href="#quote">Get Your Flat Fee</a></li>
       </ul>
       <div class="foot-contact">
-        <a href="mailto:ceo@insitutionalcateringsg.com">ceo@insitutionalcateringsg.com</a>
-        <a href="https://wa.me/6592342894?text=Hi%20there%2C%20I%E2%80%99d%20like%20a%20quote."
+        <a href="mailto:ceo@institutionalcateringsg.com">ceo@insitutionalcateringsg.com</a>
+        <a href="https://wa.me/6598790889?text=Hi%20there%2C%20I%E2%80%99d%20like%20a%20quote."
         class="phone-link"
         target="_blank" rel="noopener">
-        +65 9234 2894
+        +65 98790889
       </a>
       </div>
     </div>

@@ -45,3 +45,13 @@ form?.addEventListener('submit', (e) => {
   // Smooth scroll to success
   success.scrollIntoView({ behavior: 'smooth', block: 'start' });
 });
+
+// Make "Home" always scroll to the very top
+document.querySelectorAll('a[href="#home"]').forEach((a) => {
+  a.addEventListener('click', (e) => {
+    e.preventDefault();
+    window.scrollTo({ top: 0, behavior: 'smooth' });
+    // keep the URL hash consistent (optional)
+    if (history.replaceState) history.replaceState(null, '', '#home');
+  });
+});
