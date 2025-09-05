@@ -44,7 +44,7 @@ a{text-decoration:none; color:inherit}
 .container{width:100%; max-width:var(--container); margin-inline:auto; padding:0 var(--s-10)}
 .container h2{font-size: 60px}
 .section{padding:var(--s-20) 0}
-.display{font-size:100px; line-height:0.9; letter-spacing:-.01em; margin:0 0 var(--s-8); color: #fff; text-align: center;text-shadow: 0 3px 8px rgba(0,0,0,0.35);}
+.display{font-size:clamp(2.2rem,8.5vw,64px);line-height:1.05;letter-spacing:-.01em;margin:0 0 var(--s-8);color:#fff;text-align:center;text-shadow:0 3px 8px rgba(0,0,0,.35)}
 .lead{color:var(--muted)}
 .muted{color:#94a3b8}
 .card{border:1px solid var(--line); border-radius:var(--r); background:#fff; box-shadow:var(--shadow); padding:var(--s-6)}
@@ -194,30 +194,61 @@ legend{font-weight:700; margin-bottom:8px}
 }
 
 
-/* ===== Mobile rescue overrides (append at end) ===== */
+/* ===== Responsive hardening (append at end) ===== */
 
-/* Scale logo and big headings responsively */
+/* 1) Fluid typography / logo so headings never blow up layout */
 .logo{height:clamp(28px,6vw,48px)}
-.display{font-size:clamp(2.2rem,8.5vw,100px);word-break:break-word;hyphens:auto}
+.display{font-size:clamp(2rem,8.5vw,100px);line-height:1.05;word-break:break-word;hyphens:auto}
 .container h2{font-size:clamp(1.75rem,5.5vw,60px)}
 .method-item h4{font-size:clamp(1.1rem,4.2vw,25px)}
 
-/* Kill the fixed 800px image height on phones */
-@media(max-width:900px){
-  .how-media img{height:auto;max-height:none;object-fit:cover}
+/* 2) Grids that collapse gracefully (no overflow at mid-widths) */
+@media (max-width:1100px){
+  .two-col{grid-template-columns:1fr}
+  .hero-grid{grid-template-columns:1fr}
 }
 
-/* Tighter spacing + padding on small screens */
-@media(max-width:520px){
+/* 3) Kill fixed heights on media; let images scale naturally */
+.how-media img{width:100%;height:auto;max-height:none;object-fit:cover}
+
+/* 4) Safer spacing on small screens */
+@media (max-width:600px){
   .container{padding:0 16px}
   .section{padding:40px 0}
   .stats{grid-template-columns:repeat(2,1fr)}
 }
 
-/* Avoid horizontal scrollbars just in case */
+/* 5) Form controls: full width + no horizontal creep */
+.quote .quote-form .grid.two{grid-template-columns:1fr}
+@media (min-width:900px){ .quote .quote-form .grid.two{grid-template-columns:repeat(2,1fr)} }
+.field input,.quote .quote-form select.select{width:100%;max-width:100%}
+
+/* 6) Prevent tiny 1–2px sideways scroll from custom arrows, long words, etc. */
 html,body{overflow-x:hidden}
 
-/* Float WhatsApp a bit higher on small screens so it doesn’t overlap */
-@media(max-width:640px){
+/* 7) Floating WhatsApp won’t clash with mobile UI bars */
+@media (max-width:640px){
   .whatsapp-float{bottom:90px;right:14px}
+}
+
+/* 8) Header nav: keep layout stable at breakpoints */
+@media (max-width:900px){
+  .nav-list{display:none}
+  .hamburger{display:inline-flex}
+}
+@media (min-width:901px){
+  .nav-list{display:flex}
+  .hamburger{display:none}
+}
+
+
+/* --- mobile hardening (append at end) --- */
+@media(max-width:640px){
+  .container{padding:0 16px}
+  .section{padding:40px 0}
+  .stats{grid-template-columns:repeat(2,1fr);gap:16px}
+  .stat-label{font-size:.95rem}
+  .how-media img{height:auto!important;max-height:none;object-fit:cover}
+  .whatsapp-float{bottom:100px} /* keep FAB off the stats area */
+  .hero{background-position:center 20%}
 }
